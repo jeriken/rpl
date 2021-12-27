@@ -9,7 +9,6 @@ import 'package:rpl/fitur/microphone.dart';
 import 'package:rpl/fitur/notif.dart';
 import 'package:rpl/fitur/speaker.dart';
 
-
 Future<void> main() async {
   runApp(const MaterialApp(
     title: 'Flutter',
@@ -25,6 +24,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
+  void initState() {
+
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
