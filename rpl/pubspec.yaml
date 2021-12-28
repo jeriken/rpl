@@ -35,10 +35,10 @@ dependencies:
   objectbox_flutter_libs: any
   cupertino_icons: ^1.0.2
   geolocator: ^8.0.1
-  # baseflow_plugin_template:
-  #   git:
-  #     url: git://github.com/Baseflow/baseflow_plugin_template.git
-  #     ref: v2.0.0-nullsafety
+  baseflow_plugin_template:
+    git:
+      url: git://github.com/Baseflow/baseflow_plugin_template.git
+      ref: v2.0.0-nullsafety
   camera: ^0.9.4+5
   video_player: ^2.2.8
   audiofileplayer: ^2.1.0
@@ -52,6 +52,10 @@ dependencies:
   http: ^0.13.4
   image: ^3.1.0
   rxdart: ^0.27.3
+  flutter_blue_elves: ^0.1.8
+  flutter_nfc_kit: ^3.2.0
+  sensors_plus: ^1.2.1
+  device_info_plus: ^3.2.0
 
 dev_dependencies:
   flutter_test:
