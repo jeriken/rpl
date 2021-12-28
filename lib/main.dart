@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:rpl/database/hive.dart';
 
 import 'package:rpl/fitur/camera.dart';
 import 'package:rpl/fitur/celullar.dart';
 import 'package:rpl/fitur/contact.dart';
+import 'package:rpl/fitur/device.dart';
 import 'package:rpl/fitur/finger.dart';
 import 'package:rpl/fitur/geo.dart';
 import 'package:rpl/fitur/microphone.dart';
 import 'package:rpl/fitur/notif.dart';
+import 'package:rpl/fitur/sensor.dart';
 import 'package:rpl/fitur/speaker.dart';
+import 'package:rpl/fitur/bluetooth.dart';
 
 Future<void> main() async {
   runApp(const MaterialApp(
@@ -26,9 +30,9 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   void initState() {
-
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +64,8 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const GeolocatorWidget()),
+                  MaterialPageRoute(
+                      builder: (context) => const GeolocatorWidget()),
                 );
               },
             ),
@@ -102,7 +107,8 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MicStreamExampleApp()),
+                  MaterialPageRoute(
+                      builder: (context) => MicStreamExampleApp()),
                 );
               },
             ),
@@ -116,7 +122,8 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => FlutterContactsExample()),
+                  MaterialPageRoute(
+                      builder: (context) => FlutterContactsExample()),
                 );
               },
             ),
@@ -145,6 +152,96 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const CelullarPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 60,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: ElevatedButton(
+              child: const Text('Bluetooth'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const BluetoothPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 60,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: ElevatedButton(
+              child: const Text('Accelerometer'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SensorPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 60,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: ElevatedButton(
+              child: const Text('Gyroscope'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SensorPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 60,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: ElevatedButton(
+              child: const Text('Magnetometer'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const SensorPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 60,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: ElevatedButton(
+              child: const Text('IMEI & Serial Number'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DeviceInfoPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 60,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: ElevatedButton(
+              child: const Text('Cache'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const HivePage()),
                 );
               },
             ),
