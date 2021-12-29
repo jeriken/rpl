@@ -8,6 +8,7 @@ import 'package:rpl/fitur/device.dart';
 import 'package:rpl/fitur/finger.dart';
 import 'package:rpl/fitur/geo.dart';
 import 'package:rpl/fitur/microphone.dart';
+import 'package:rpl/fitur/nfc.dart';
 import 'package:rpl/fitur/notif.dart';
 import 'package:rpl/fitur/sensor.dart';
 import 'package:rpl/fitur/speaker.dart';
@@ -41,24 +42,24 @@ class _HomeState extends State<Home> {
       ),
       body: ListView(
         children: [
-          // Container(
-          //   width: 100,
-          //   height: 70,
-          //   padding: const EdgeInsets.fromLTRB(10, 15, 10, 5),
-          //   child: ElevatedButton(
-          //     child: const Text('Notification'),
-          //     onPressed: () {
-          //       Navigator.push(
-          //         context,
-          //         MaterialPageRoute(builder: (context) => const NotifPage()),
-          //       );
-          //     },
-          //   ),
-          // ),
           Container(
             width: 100,
             height: 70,
             padding: const EdgeInsets.fromLTRB(10, 15, 10, 5),
+            child: ElevatedButton(
+              child: const Text('Notification'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NotifPage()),
+                );
+              },
+            ),
+          ),
+          Container(
+            width: 100,
+            height: 70,
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: ElevatedButton(
               child: const Text('Geo-Location'),
               onPressed: () {
@@ -79,7 +80,7 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CameraExampleHome()),
+                  MaterialPageRoute(builder: (context) => CameraPage()),
                 );
               },
             ),
@@ -147,7 +148,7 @@ class _HomeState extends State<Home> {
             height: 60,
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: ElevatedButton(
-              child: const Text('Celullar Access'),
+              child: const Text('Celullar & Wifi'),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -176,7 +177,7 @@ class _HomeState extends State<Home> {
             height: 60,
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: ElevatedButton(
-              child: const Text('Accelerometer'),
+              child: const Text('Accelerometer & Gyroscope & Magnetometer'),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -191,27 +192,12 @@ class _HomeState extends State<Home> {
             height: 60,
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: ElevatedButton(
-              child: const Text('Gyroscope'),
+              child: const Text('NFC'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const SensorPage()),
-                );
-              },
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 60,
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-            child: ElevatedButton(
-              child: const Text('Magnetometer'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const SensorPage()),
+                      builder: (context) => NFCPage()),
                 );
               },
             ),

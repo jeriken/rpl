@@ -84,33 +84,33 @@ class _HivePageState extends State<HivePage> {
 
   void addData() {
     var awal = DateTime.now().millisecondsSinceEpoch;
-    for (var i = 0; i < 5000; i++) {
+    for (var i = 0; i < 10; i++) {
       box1.add('ini adalah date ke- ${i.toString()}');
     }
     var akhir = DateTime.now().millisecondsSinceEpoch;
-    print('Waktu membuat 5000 data: ${akhir-awal} ms');
+    print('Waktu membuat 10 data: ${akhir-awal} ms');
   }
 
   void readData() {
     var awal = DateTime.now().millisecondsSinceEpoch;
     box1.toMap();
     var akhir = DateTime.now().millisecondsSinceEpoch;
-    print('Waktu membaca 5000 data: ${akhir-awal} ms');
+    print('Waktu membaca 10 data: ${akhir-awal} ms');
   }
 
   void updateData() {
     var awal = DateTime.now().millisecondsSinceEpoch;
-    for (var i = 0; i < 5000; i++) {
+    for (var i = 0; i < 10; i++) {
       box1.put(i, 'ini adalah date ke- ${i.toString()} | diubah');
     }
     var akhir = DateTime.now().millisecondsSinceEpoch;
-    print('Waktu mengupdate 5000 data: ${akhir-awal} ms');
+    print('Waktu mengupdate 10 data: ${akhir-awal} ms');
   }
 
   void deleteData(){
     var awal = new DateTime.now().millisecondsSinceEpoch;
     Hive.box('database1');
     var akhir = new DateTime.now().millisecondsSinceEpoch;
-    print('Waktu menghapus 5000 data: ${akhir-awal} ms');
+    print('Waktu menghapus 10 data: ${akhir-awal} ms');
   }
 }
