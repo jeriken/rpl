@@ -11,6 +11,8 @@ import 'record-setting/text_record_setting.dart';
 import 'record-setting/uri_record_setting.dart';
 
 class NFCPage extends StatefulWidget {
+  const NFCPage({Key? key}) : super(key: key);
+
   @override
   _NFCPageState createState() => _NFCPageState();
 }
