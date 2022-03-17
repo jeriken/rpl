@@ -45,20 +45,20 @@ class _HomeState extends State<Home> {
       ),
       body: ListView(
         children: [
-          Container(
-            width: 100,
-            height: 70,
-            padding: const EdgeInsets.fromLTRB(10, 15, 10, 5),
-            child: ElevatedButton(
-              child: const Text('Notification'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => NotifPage()),
-                );
-              },
-            ),
-          ),
+          // Container(
+          //   width: 100,
+          //   height: 70,
+          //   padding: const EdgeInsets.fromLTRB(10, 15, 10, 5),
+          //   child: ElevatedButton(
+          //     child: const Text('Notification'),
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(builder: (context) => NotifPage()),
+          //       );
+          //     },
+          //   ),
+          // ),
           Container(
             width: 100,
             height: 70,
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => CameraPage()),
+                  MaterialPageRoute(builder: (context) => const CameraPage(id: '',)),
                 );
               },
             ),
@@ -112,26 +112,26 @@ class _HomeState extends State<Home> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => MicStreamExampleApp()),
+                      builder: (context) => Microphone()),
                 );
               },
             ),
           ),
-          Container(
-            width: 100,
-            height: 60,
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-            child: ElevatedButton(
-              child: const Text('Contact Access'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => FlutterContactsExample()),
-                );
-              },
-            ),
-          ),
+          // Container(
+          //   width: 100,
+          //   height: 60,
+          //   padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          //   child: ElevatedButton(
+          //     child: const Text('Contact Access'),
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //             builder: (context) => ContactsExampleApp()),
+          //       );
+          //     },
+          //   ),
+          // ),
           Container(
             width: 100,
             height: 60,
@@ -190,21 +190,21 @@ class _HomeState extends State<Home> {
               },
             ),
           ),
-          Container(
-            width: 100,
-            height: 60,
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-            child: ElevatedButton(
-              child: const Text('NFC'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => NFCPage()),
-                );
-              },
-            ),
-          ),
+          // Container(
+          //   width: 100,
+          //   height: 60,
+          //   padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+          //   child: ElevatedButton(
+          //     child: const Text('NFC'),
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //             builder: (context) => NFCPage()),
+          //       );
+          //     },
+          //   ),
+          // ),
           Container(
             width: 100,
             height: 60,

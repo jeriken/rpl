@@ -39,19 +39,20 @@ dependencies:
     git:
       url: git://github.com/Baseflow/baseflow_plugin_template.git
       ref: v2.0.0-nullsafety
-  camera: ^0.9.4+5
+  camera: ^0.9.4+16
   video_player: ^2.2.8
   audiofileplayer: ^2.1.0
   mic_stream: ^0.5.3+1
-  flutter_contacts: ^1.1.1+2
+  flutter_contacts: ^1.1.3
   local_auth: ^1.1.9
   connectivity_plus: ^2.1.0
-  flutter_local_notifications: ^9.1.5
   device_info: ^2.0.3
   flutter_native_timezone: ^2.0.0
   http: ^0.13.4
   image: ^3.1.0
   rxdart: ^0.27.3
+  flutter_local_notifications: ^5.0.0+1
+  locally: ^1.0.5
 
 dev_dependencies:
   flutter_test:

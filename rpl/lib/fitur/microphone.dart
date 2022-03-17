@@ -9,7 +9,6 @@ import 'package:flutter/animation.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:mic_stream/mic_stream.dart';
-import 'package:path_provider/path_provider.dart';
 
 enum Command {
   start,
@@ -19,14 +18,14 @@ enum Command {
 
 const AUDIO_FORMAT = AudioFormat.ENCODING_PCM_16BIT;
 
-void main() => runApp(MicStreamExampleApp());
+void main() => runApp(Microphone());
 
-class MicStreamExampleApp extends StatefulWidget {
+class Microphone extends StatefulWidget {
   @override
-  _MicStreamExampleAppState createState() => _MicStreamExampleAppState();
+  _MicrophoneState createState() => _MicrophoneState();
 }
 
-class _MicStreamExampleAppState extends State<MicStreamExampleApp>
+class _MicrophoneState extends State<Microphone>
     with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   Stream? stream;
   late StreamSubscription listener;
@@ -90,6 +89,10 @@ class _MicStreamExampleAppState extends State<MicStreamExampleApp>
     // method to get the stream, we don't yet have access
     // to the sampleRate and bitDepth properties
     print("wait for stream");
+
+    // Default option. Set to false to disable request permission dialogue
+    MicStream.shouldRequestPermission(true);
+
     stream = await MicStream.microphone(
         audioSource: AudioSource.DEFAULT,
         sampleRate: 16000,
@@ -221,15 +224,15 @@ class _MicStreamExampleAppState extends State<MicStreamExampleApp>
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.broken_image),
-                title: Text("Sound Wave"),
+                label: "Sound Wave",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.broken_image),
-                title: Text("Intensity Wave"),
+                label: "Intensity Wave",
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.view_list),
-                title: Text("Statistics"),
+                label: "Statistics",
               )
             ],
             backgroundColor: Colors.black26,
