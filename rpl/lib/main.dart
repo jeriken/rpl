@@ -13,9 +13,6 @@ import 'package:rpl/fitur/notif.dart';
 import 'package:rpl/fitur/sensor.dart';
 import 'package:rpl/fitur/speaker.dart';
 import 'package:rpl/fitur/bluetooth.dart';
-import 'package:rpl/fitur/nfc.dart';
-import 'package:rpl/fitur/imei.dart';
-import 'fitur/nfc.dart';
 
 Future<void> main() async {
   runApp(const MaterialApp(
@@ -210,27 +207,12 @@ class _HomeState extends State<Home> {
             height: 60,
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
             child: ElevatedButton(
-              child: const Text('Serial Number'),
+              child: const Text('IMEI & Serial Number'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                       builder: (context) => const DeviceInfoPage()),
-                );
-              },
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 60,
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-            child: ElevatedButton(
-              child: const Text('IMEI'),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const IMEIPage()),
                 );
               },
             ),
